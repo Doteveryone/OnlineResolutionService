@@ -4208,6 +4208,9 @@ p + .govuk-heading-s,
     .govuk-\!-width-one-quarter {
       width: 25% !important; } }
 
+html.govuk-template {
+  background: #fff; }
+
 .govuk-hint, .govuk-label, .govuk-body-l, .govuk-body-lead,
 .big-number, .govuk-warning-text__text, .govuk-button, .govuk-heading-m,
 .govuk-body-m, .govuk-body, .govuk-list, .govuk-back-link, .govuk-link, .govuk-error-message,
@@ -4216,7 +4219,7 @@ p + .govuk-heading-s,
   font-family: "Hind", sans-serif;
   font-weight: 400; }
 
-.govuk-fieldset__legend--xl, .govuk-heading-l, .govuk-heading-m, .govuk-heading-xl {
+.govuk-fieldset__legend--xl, .govuk-heading-l, .govuk-heading-m, .govuk-heading-xl, .govuk-heading-m {
   font-family: "Hind", sans-serif;
   font-weight: 700; }
 
@@ -4263,7 +4266,15 @@ p + .govuk-heading-s,
   margin-bottom: 20px; }
 
 .govuk-tag.govuk-phase-banner__content__tag {
-  background: #85A81E; }
+  background: #39ff14;
+  color: #333; }
+  .govuk-tag.govuk-phase-banner__content__tag a {
+    text-decoration: none;
+    color: 333; }
+
+.govuk-phase-banner__text .govuk-link, .govuk-phase-banner__text a, .govuk-phase-banner__text .govuk-link:visited, .govuk-phase-banner__text a:visited {
+  text-decoration: none;
+  color: #000 !important; }
 
 .govuk-button, .govuk-button--start, .govuk-button:visited {
   background: #3e7bdc;
@@ -4329,7 +4340,9 @@ p + .govuk-heading-s,
   background-repeat: no-repeat;
   background-position: top center;
   padding-top: 200px;
-  text-align: center; }
+  text-align: center;
+  font-family: "Hind", sans-serif;
+  font-weight: 400; }
 #steps ul :nth-child(1) {
   background-image: url("../images/step1.png"); }
 #steps ul :nth-child(2) {
@@ -4396,7 +4409,26 @@ blockquote {
 
 #verify_service {
   text-align: center;
-  marginpadding-top: 15px;
+  padding-top: 15px;
   margin-bottom: 15px; }
+
+.prototype-panel {
+  padding: 20px;
+  margin: 10px; }
+  .prototype-panel h1 {
+    padding: 0 20px;
+    background: #39ff14;
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    outline: 2px solid transparent;
+    outline-offset: -2px;
+    letter-spacing: 1px;
+    font-weight: 700; }
+
+.prototype-nocontent {
+  border: dashed #39ff14 2px;
+  padding: 50px 0;
+  text-align: center; }
 
 /*# sourceMappingURL=main.css.map */

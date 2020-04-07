@@ -6,21 +6,26 @@ $warning-colour:#fb7e92;
 $success-colour:#85A81E;
 $primary-colour:#d6e8f8;
 $secondary-colour:#e4e4e4;
+$prototype-colour:#39ff14;
 
 @import "govuk/all";
+
+html.govuk-template {
+  background:#fff;
+}
 
 //Type
 .govuk-hint, .govuk-label, .govuk-body-l, .govuk-body-lead,
   .big-number, .govuk-warning-text__text, .govuk-button, .govuk-heading-m,
   .govuk-body-m, .govuk-body, .govuk-list, .govuk-back-link, .govuk-link, .govuk-error-message,
-  .govuk-body-l,
+  .govuk-body-l, 
   .govuk-fieldset__legend, .govuk-details, .govuk-summary-list, .govuk-panel
 {
   font-family:"Hind", sans-serif;
   font-weight:400;
 }
 
-.govuk-fieldset__legend--xl, .govuk-heading-l, .govuk-heading-m, .govuk-heading-xl {
+.govuk-fieldset__legend--xl, .govuk-heading-l, .govuk-heading-m, .govuk-heading-xl, .govuk-heading-m {
   font-family:"Hind", sans-serif;
   font-weight:700;
 }
@@ -88,7 +93,19 @@ $secondary-colour:#e4e4e4;
 }
 
 .govuk-tag.govuk-phase-banner__content__tag{
-  background:$success-colour;
+  background:$prototype-colour;
+  color:#333;
+  a {
+    text-decoration:none;
+    color:333;
+  }
+}
+
+.govuk-phase-banner__text {
+  .govuk-link, a, .govuk-link:visited, a:visited {
+    text-decoration:none;
+    color:#000!important;
+  }
 }
 
 .govuk-button, .govuk-button--start, .govuk-button:visited{
@@ -185,6 +202,8 @@ $secondary-colour:#e4e4e4;
     padding-top:200px;
     text-align:center;
     @extend %govuk-heading-m;
+    font-family:"Hind", sans-serif;
+    font-weight:400;
   }
   ul{
     :nth-child(1) {
@@ -273,7 +292,6 @@ $secondary-colour:#e4e4e4;
   box-align: center;
 }
 
-
 blockquote {
   border-left: solid 10px $secondary-colour;
   margin-left:0;
@@ -284,4 +302,26 @@ blockquote {
   text-align: center;
   padding-top:govuk-spacing(3); 
   margin-bottom:govuk-spacing(3); 
+}
+
+.prototype-panel{
+  padding:govuk-spacing(4);
+  margin:govuk-spacing(2);
+  h1  {
+    padding:0 govuk-spacing(4);
+    background:$prototype-colour;
+    display:inline-block;
+    text-transform:uppercase;
+    font-family: Arial, sans-serif;
+    outline:2px solid transparent;
+    outline-offset:-2px;
+    letter-spacing: 1px;
+    font-weight: 700;
+  }
+}
+
+.prototype-nocontent{
+  border:dashed $prototype-colour 2px;
+  padding:govuk-spacing(8) 0;
+  text-align:center;
 }
